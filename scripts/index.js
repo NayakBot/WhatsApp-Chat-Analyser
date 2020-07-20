@@ -4,7 +4,7 @@ $("input").on("change",function (e) {
     reader.readAsText(e.target.files[0]);
     reader.onload = function () {
         const result = extract(reader.result);
-        //graph(result);
+        graph(result);
     }
     $(".first").fadeToggle(0);
     $(".second").fadeToggle(1000);
@@ -22,25 +22,24 @@ function extract(data) {
 
     const texts = temp[0];
     const dates = temp[1]; 
-    console.log(temp);
-    //console.log(dates);
+
     const participants = getParticipants(texts);
-//console.log(participants);
-    // let wordsObject = getMessageCount(participants, texts);
 
-    // let topWords = mostUsedWords(wordsObject.words, 3);
+    let wordsObject = getMessageCount(participants, texts);
 
-    // const dateCount = getDates(wordsObject.timeStamp, dates);
+    let topWords = mostUsedWords(wordsObject.words, 3);
+    console.log(wordsObject);
+    const dateCount = getDates(wordsObject.timeStamp, dates);
     
-    // const timeCount = getTimes(wordsObject.timeStamp, dates);
+    const timeCount = getTimes(wordsObject.timeStamp, dates);
     
-    // return{
-    //     participants,
-    //     wordsObject,
-    //     topWords,
-    //     dateCount,
-    //     timeCount
-    // };
+    return{
+        participants,
+        wordsObject,
+        topWords,
+        dateCount,
+        timeCount
+    };
 }
 
 function printer(param) {

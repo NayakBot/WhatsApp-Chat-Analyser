@@ -8,8 +8,8 @@ function splitLines(data){
     {
         for(let i = 1 ; i < temp.length-1 ; i++)
         {
-            console.log(temp[i]);
-            if(isNaN(temp[i].charAt(0)) || (temp[i].charAt(2) != '/'))
+            //console.log(temp[i]);
+            if(isNaN(temp[i].charAt(0)) || !(temp[i].charAt(1) == '/' || temp[i].charAt(2) == '/'))
             {
                 if(temp[i][0] == ' ')
                     temp[i - 1] += temp[i];
@@ -57,7 +57,7 @@ function getParticipants(texts) {
         {
             const participant = texts[i].split(': ')[0];
 
-            if(!temp.includes(participant))
+            if(!temp.includes(participant)  && (participant+'').match("changed the subject") == null)
                 temp.push(participant);
         }
     }
@@ -120,17 +120,17 @@ function getMessageCount(participants, texts) {
     return { messages, media, del_msg, msgLength, words, timeStamp };
 }
 
-const stopwords = ['all', 'also' ,'am', 'and', 'any', 'are', 'ask', 'but', 'can', 'could', "couldn't", 'did' ,'do', 'does', "doesn't", "don't" ,
+const stopwords = ['about', 'all', 'also' ,'am', 'and', 'any', 'are', 'ask', 'but', 'can', 'could', "couldn't", 'did' ,'do', 'does', "doesn't", "don't" , 'even',
                     'for','from', 'get', 'gets', 'got', 'had', "hadn't", 'has', "hasn't", 'have', "haven't", 'he', "he's", 'her', 'hers', 'hi',
                     'him', 'his', 'how', "i'd", 'if', "i'll", "i'm", "i've", 'is', "isn't", 'it', "it'd", "it'll", "it's",
-                    'its', 'just', 'let', "let's", 'me', 'might', 'more', 'moreover', 'most', 'mostly', 'much', 'must', 'my', 'myself',
+                    'its', 'just', 'know', 'let', "let's", 'me', 'might', 'more', 'moreover', 'most', 'mostly', 'much', 'must', 'my', 'myself',
                     'name', 'no', 'nobody', 'non', 'none', 'noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'obviously', 
                     'of', 'off', 'often', 'oh', 'ok', 'okay', 'old', 'on', 'once', 'one', 'ones', 'only', 'onto', 'or', 
                     'other', 'others', 'otherwise', 'ought', 'our', 'ours', 'ourselves', 'out', 'outside', 'over', 'overall',
-                    'own', 'people', 'per', 'provides', 'right', 'said', 'saw', 'say', 'shall', 'she', 'should', "shouldn't", 'since',
+                    'own', 'people', 'per', 'provides', 'right', 'said', 'see', 'same', 'saw', 'say', 'shall', 'she', 'should', "shouldn't", 'since',
                     'some', 'somebody', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhat', 'somewhere', 
                     'sup', 'sure', 'tell', 'than', 'thank', 'thanks', 'thanx', 'that', "that's", 'thats', 'the', 'their', 'theirs', 
-                    'them', 'themselves', 'then', 'thence', 'there', "there's", 'thereafter', 'thereby', 'therefore', 'therein',
+                    'them', 'themselves', 'then', 'thence', 'there', "there's", 'thereafter', 'thereby', 'therefore', 'therein', 'time',
                     'theres', 'thereupon', 'these', 'they', "they'd", "they'll", "they're", "they've", 'think', 'third', 'this',
                     'thorough', 'thoroughly', 'those', 'though', 'three', 'through', 'throughout', 'thru', 'thus', 'to', 
                     'together', 'too', 'took', 'toward', 'towards', 'tried', 'tries', 'truly', 'try', 'trying', 'twice', 'two',
