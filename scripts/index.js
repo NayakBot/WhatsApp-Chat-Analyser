@@ -3,7 +3,8 @@ $("input").on("change",function (e) {
     const reader = new FileReader();
     reader.readAsText(e.target.files[0]);
     reader.onload = function () {
-        console.log(reader.result);
+        const result = extract(reader.result);
+        //graph(result);
     }
     $(".first").fadeToggle(0);
     $(".second").fadeToggle(1000);
@@ -12,35 +13,56 @@ $("input").on("change",function (e) {
 function showFirstPage() {
     $(".first").fadeToggle(1000);
     $(".second").fadeToggle(0);
+    destroyCharts();
 }
 
-// const data = `"11/03/20, 10:20 pm - Manoj Rvce: I mean atleast their parents
-// 11/03/20, 10:20 pm - Manoj Rvce: Like MY PARENTS were like don't go and spread anything stay at home only
-// 11/03/20, 10:20 pm - Manoj Rvce: Like whyy??
-// 11/03/20, 10:21 pm - Mridul Mohta RV CS: Yeah
-// 11/03/20, 10:25 pm - Mridul Mohta RV CS: Dear all,
-// Quizzes and tests are postponed to 23rd March onwards. Official circular will be sent shortly.
-// Hod ISE
-// 11/03/20, 10:26 pm - Manjunath S Nayak: Damn this will be a hectic few weeks
-// 11/03/20, 10:26 pm - Amaan RV CS: Okay so that is 10 days holidays
-// 11/03/20, 10:27 pm - Mridul Mohta RV CS: Ig
-// 11/03/20, 10:29 pm - Amaan RV CS: <Media omitted>
-// 11/03/20, 10:29 pm - Amaan RV CS: Guysss do nptel
-// 11/03/20, 10:29 pm - Mridul Mohta RV CS: Yas
-// 11/03/20, 10:29 pm - Manjunath S Nayak: Thanks for reminding
-// 11/03/20, 10:30 pm - Amaan RV CS: 🤘🏻"`;
-// console.log(data);
+function extract(data) {
 
-// function test(data) {
-//     data[0]=25;
-// }
+    const temp = splitDates(data);
 
-// function test1(data) {
-//     data[1]=26;
-// }
+    const texts = temp[0];
+    const dates = temp[1]; 
+    console.log(temp);
+    //console.log(dates);
+    const participants = getParticipants(texts);
+//console.log(participants);
+    // let wordsObject = getMessageCount(participants, texts);
 
-// test(data);
-// console.log(data);
+    // let topWords = mostUsedWords(wordsObject.words, 3);
 
-// test1(data);
-// console.log(data);
+    // const dateCount = getDates(wordsObject.timeStamp, dates);
+    
+    // const timeCount = getTimes(wordsObject.timeStamp, dates);
+    
+    // return{
+    //     participants,
+    //     wordsObject,
+    //     topWords,
+    //     dateCount,
+    //     timeCount
+    // };
+}
+
+function printer(param) {
+    for (let i = 0; i < param.length; i++) {
+        console.log(param[i]);
+    }
+}
+// 01/04/20, 12:00 pm - Mridul Mohta RV CS changed the group description
+// 01/04/20, 11:41 am - Mridul Mohta RV CS: That's my boy
+// 01/04/20, 11:51 am - Manoj Rvce: <Media omitted>
+// 01/04/20, 11:51 am - Manjunath S Nayak: Who's this
+// 17/03/20, 7:05 pm - Mridul Mohta RV CS: I'm disappointed
+// 17/03/20, 7:05 pm - Manoj Rvce: 😂😂😂😂
+// 17/03/20, 7:09 pm - Mridul Mohta RV CS: True
+// 17/03/20, 7:10 pm - Amaan RV CS: 💯
+// 01/04/20, 11:52 am - Manjunath S Nayak: This is more important
+// 17/03/20, 7:08 pm - Amaan RV CS: This message was deleted
+// 17/03/20, 7:08 pm - Mridul Mohta RV CS: We support you mate
+// 01/04/20, 11:52 am - NEW1: This is more important
+// 17/03/20, 7:08 pm - NEW2: This message was deleted
+// 17/03/20, 7:08 pm - NEW3: We support you mate
+// 17/03/20, 7:08 pm - Mridul Mohta RV CS: We support you mate
+// 01/04/20, 11:52 am - NEW4: This is more important
+// 17/03/20, 7:08 pm - NEW5: This message was deleted
+// 17/03/20, 7:08 pm - NEW6: We support you mate

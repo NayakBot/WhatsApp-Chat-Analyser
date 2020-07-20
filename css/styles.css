@@ -1,11 +1,8 @@
 .first {
-    background-color: aquamarine;
+    background-color: rgb(252, 223, 252);
 }
 
-.second {
-    background-color: burlywood;
-}
-
-.third {
-    background-color: coral;
+h3 {
+    padding-top: 4%;
+    text-align: center;
 }

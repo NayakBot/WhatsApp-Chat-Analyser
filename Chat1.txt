@@ -13,3 +13,124 @@ Hod ISE
 11/03/20, 10:29 pm - Mridul Mohta RV CS: Yas
 11/03/20, 10:29 pm - Manjunath S Nayak: Thanks for reminding
 11/03/20, 10:30 pm - Amaan RV CS: 🤘🏻
+19/03/20, 10:31 pm - Manoj Rvce: With the PM telling that there will be an extended curfew of 15 days from 22nd don't think this will happen right?
+18/03/20, 9:45 pm - Mridul Mohta RV CS: 1 cd
+2 a
+3 c
+4 b
+5 c
+6 d
+7 d
+8 c
+9 a
+10 a
+25/03/20, 7:36 pm - Manoj Rvce: Week 8: PA4
+
+import java.util.stream.Stream;
+import java.io.*;
+
+public class Pattern4 {
+  public static void main(String[] args) throws IOException {
+    int l = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
+    if(l % 2 == 0)
+      System.out.print("Invalid line number");
+    else {
+      int half = l / 2;
+      for(int i = 1; i <= half + 1; i++) {
+        Stream.generate(() -> " ").limit(half - i + 1).forEach(System.out::print);
+        Stream.generate(() -> "* ").limit(i).forEach(System.out::print);
+        System.out.println("");
+      }
+      for(int i = half; i >= 1; i--) {
+        Stream.generate(() -> " ").limit(half - i).forEach(System.out::print);
+        Stream.generate(() -> " *").limit(i).forEach(System.out::print);
+        System.out.println("");
+      }
+    }
+  }
+}
+24/03/20, 9:23 pm - Mridul Mohta RV CS: •𝐐𝐔𝐀𝐑𝐀𝐍𝐓𝐈𝐍𝐄 𝐒𝐓𝐀𝐑𝐓𝐄𝐑 𝐏𝐀𝐂𝐊•
+
+Thank me later
+
+___
+MOVIES:
+https://drive.google.com/drive/mobile/folders/1z9TE9dCdWe1epUWxHbpCZSSUoAF4DQdj
+
+GAMES:
+https://drive.google.com/drive/mobile/folders/1_rk2Y2Dm4t95OqA4RJT1T3oTv6Q7J9o8
+
+SERIES:
+https://drive.google.com/drive/mobile/folders/16vVbSTKIwGCdr1wFttAK_INuvXjXjH9Z
+
+MUSIC:
+https://drive.google.com/drive/mobile/folders/1OgkdIeT7gI_fvRnDlJvrnPv3_RbCku2o
+
+SOFTWARES:
+https://drive.google.com/drive/mobile/folders/1zLGO4Dhek-CnMTPgPG5BbHZLeKPntVEK
+
+Fix Google Drive Download Limit (Quota Exceeded) Error
+https://www.geekrar.com/fix-bypass-google-drive-download-limit-error/
+
+ You can make a copy in your own Google Drive and download it from there.
+
+It Works 🙂
+24/03/20, 9:25 pm - Likith S R RV: bruh
+25/03/20, 7:36 pm - Manoj Rvce: Week 8: PA5
+
+import java.io.*;
+
+public class Pattern5 {
+  public static void main(String[] args) throws IOException {
+    int n = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
+    
+    if(n == 1)
+      System.out.println("   \n  |\n  |");
+    else if(n == 2)
+      System.out.println(" _ \n _|\n|_ ");
+    else if(n == 3)
+      System.out.println(" _ \n _|\n _|");
+    else if(n == 4)
+      System.out.println("   \n|_|\n  |");
+    else if(n == 5)
+      System.out.println(" _ \n|_ \n _|");
+    else if(n == 6)
+      System.out.println(" _ \n|_ \n|_|");
+    else if(n == 7)
+      System.out.println(" _ \n  |\n  |");
+    else if(n == 8)
+      System.out.println(" _ \n|_|\n|_|");
+    else if(n == 9)
+      System.out.println(" _ \n|_|\n _|");
+    else if(n == 0)
+      System.out.println(" _ \n| |\n|_|");
+  }
+}
+25/03/20, 7:36 pm - Manoj Rvce: <Media omitted>
+25/03/20, 7:36 pm - Manoj Rvce: these are the ones i got
+25/03/20, 7:36 pm - Manoj Rvce: not sure tho
+25/03/20, 7:36 pm - Manoj Rvce: Week 8: PA4
+
+import java.util.stream.Stream;
+import java.io.*;
+
+public class Pattern4 {
+  public static void main(String[] args) throws IOException {
+    int l = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
+    if(l % 2 == 0)
+      System.out.print("Invalid line number");
+    else {
+      int half = l / 2;
+      for(int i = 1; i <= half + 1; i++) {
+        Stream.generate(() -> " ").limit(half - i + 1).forEach(System.out::print);
+        Stream.generate(() -> "* ").limit(i).forEach(System.out::print);
+        System.out.println("");
+      }
+      for(int i = half; i >= 1; i--) {
+        Stream.generate(() -> " ").limit(half - i).forEach(System.out::print);
+        Stream.generate(() -> " *").limit(i).forEach(System.out::print);
+        System.out.println("");
+      }
+    }
+  }
+}
