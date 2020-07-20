@@ -4,15 +4,24 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
 
   <body>
-    <div class="container first">
-    
-      <label for="file">Choose file to upload</label>
-       <input type="file" accept=".txt" name="file" id="file">
+    <div class="first">
+      
+      <div class="jumbotron">
+        <h3>Welcome to</h3>  
+        <h1 class="display-4">ChatCharter</h1>
+        <p class="lead">ChatCharter is single-page Web App that visulaises your WhatsApp chats and gives you insights like who sent the most texts, media and much more</p>
+      </div>
+
+      <div class="container">
+        <label for="file">Choose file to upload</label>
+        <input type="file" accept=".txt" name="file" id="file">
+      </div>
 
     </div>
 
@@ -25,7 +34,7 @@
 
       <div class="col">
         <h3>MESSAGES SENT</h3>
-        <canvas id="msgChart" style="min-height: 250px; min-width: 250px;"></canvas>
+        <canvas id="msgChart"></canvas>
       </div>
       <br>
       <hr>
