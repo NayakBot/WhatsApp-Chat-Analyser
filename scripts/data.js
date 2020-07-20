@@ -8,7 +8,7 @@ function splitLines(data){
     {
         for(let i = 1 ; i < temp.length-1 ; i++)
         {
-            //console.log(temp[i]);
+
             if(isNaN(temp[i].charAt(0)) || !(temp[i].charAt(1) == '/' || temp[i].charAt(2) == '/'))
             {
                 if(temp[i][0] == ' ')

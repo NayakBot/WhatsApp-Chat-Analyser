@@ -28,7 +28,7 @@ function extract(data) {
     let wordsObject = getMessageCount(participants, texts);
 
     let topWords = mostUsedWords(wordsObject.words, 3);
-    console.log(wordsObject);
+    
     const dateCount = getDates(wordsObject.timeStamp, dates);
     
     const timeCount = getTimes(wordsObject.timeStamp, dates);

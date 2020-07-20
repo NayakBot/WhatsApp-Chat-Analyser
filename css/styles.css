@@ -6,3 +6,7 @@ h3 {
     padding-top: 4%;
     text-align: center;
 }
+
+canvas {
+	min-height: 250px;
+}
