@@ -1,5 +1,4 @@
 $("input").on("change",function (e) {
-    console.log(e.target.files[0]);
     const reader = new FileReader();
     reader.readAsText(e.target.files[0]);
     reader.onload = function () {
@@ -8,13 +7,22 @@ $("input").on("change",function (e) {
     }
     $(".first").fadeToggle(0);
     $(".second").fadeToggle(1000);
+    $("body").css("background-color", "white");
 });
 
 function showFirstPage() {
     $(".first").fadeToggle(1000);
     $(".second").fadeToggle(0);
+    $("body").css("background-color", "rgb(252, 223, 252)");
     destroyCharts();
 }
+
+$('.go-to-top').each(function(){
+    $(this).click(function(){ 
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+        return false; 
+    });
+});
 
 function extract(data) {
 

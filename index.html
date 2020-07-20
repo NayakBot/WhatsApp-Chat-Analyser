@@ -18,9 +18,26 @@
         <p class="lead">ChatCharter is single-page Web App that visulaises your WhatsApp chats and gives you insights like who sent the most texts, media and much more</p>
       </div>
 
-      <div class="container">
-        <label for="file">Choose file to upload</label>
-        <input type="file" accept=".txt" name="file" id="file">
+      <div class="container instructions">
+        <div class="custom-file mb-3">
+          <label for="file" class="custom-file-label">Choose file to upload</label>
+          <input type="file" class="custom-file-input" accept=".txt" name="file" id="file">
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="./imgs/Step1.jpeg">
+            </div>
+            <div class="col-sm-4">
+              <img src="./imgs/Step2.jpeg">
+            </div>
+            <div class="col-sm-4">
+              <img src="./imgs/Step3.jpeg">
+              <h2 style="text-align: center; padding-top: 20px;">Save your file in Drive or E-mail and upload it here!</h2>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -28,7 +45,16 @@
     
     <div class="container second" style="display: none; text-align: center;">
 
-      <button class="btn-second btn-primary" onclick="showFirstPage()">Try Again</button>
+      <button class="btn btn-primary" onclick="showFirstPage()">Let's Chart another file?</button>
+      
+      <a href="https://github.com/ManjunathNayak2k/WhatsApp-Chat-Analyser"
+      class="btn btn-dark" 
+      role="button"
+      style="background-color: rgba(0,0,0,1);">
+      View Code
+      <img src="./imgs/icon.png" style="height: 20px; width: 20px;">
+      </a>
+
       <br>
       <hr>
 
@@ -37,6 +63,9 @@
         <canvas id="msgChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -44,6 +73,9 @@
         <canvas id="wordChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -51,6 +83,9 @@
         <canvas id="mediaChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -58,6 +93,9 @@
         <canvas id="top10Chart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -65,6 +103,9 @@
         <canvas id="delMsgChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -72,6 +113,9 @@
         <canvas id="msgLenChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -79,6 +123,9 @@
         <canvas id="timeChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
       <hr>
 
       <div class="col">
@@ -86,9 +133,27 @@
         <canvas id="dateChart"></canvas>
       </div>
       <br>
+      <button class="btn btn-primary go-to-top" onclick="scrollToTop()"> 
+        Click to scroll to top 
+      </button> 
+      <br>
       <hr>
-      
+
+      <button class="btn btn-primary" onclick="showFirstPage()">Let's Chart another file?</button>
+      <a href="https://github.com/ManjunathNayak2k/WhatsApp-Chat-Analyser"
+      class="btn btn-dark" 
+      role="button">
+      View Code</a>
+
+      <hr>
+
     </div>
+
+    <footer class="page-footer font-small blue pt-4">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://github.com/ManjunathNayak2k">  Manjunath Nayak</a>
+      </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
