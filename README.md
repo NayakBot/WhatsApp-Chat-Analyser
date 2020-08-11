@@ -1,4 +1,4 @@
-# Welcome to GitHub Pages
+# ChatCharter
 
 A single-page completely front-end WebApp to analyse your WhatsApp chats and display relevant stats as graphs.  
 
