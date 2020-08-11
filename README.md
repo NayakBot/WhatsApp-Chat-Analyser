@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/ManjunathNayak2k/WhatsApp-Chat-Analyser/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A single-page completely front-end WebApp to analyse your WhatsApp chats and display relevant stats as graphs.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[Deployed](https://manjunathnayak2k.github.io/WhatsApp-Chat-Analyser/) on GitHub pages.  
 
-### Markdown
+Uses [ChartJS](https://www.chartjs.org/) for the graphs.  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Currently available stats:
+- Number of Messages sent
+- Number of Words sent
+- Number of Media sent
+- Number of Messages deleted
+- Top 10 most used words
+- Peak times of messages sent
+- Peak dates of messages sent  
 
-```markdown
-Syntax highlighted code block
+## Screenshots
 
-# Header 1
-## Header 2
-### Header 3
+![Image](https://drive.google.com/file/d/15VEAYtZcH2YimnDUZbGpYsai612xvKPm/view)  
+![Image](https://drive.google.com/file/d/15VEAYtZcH2YimnDUZbGpYsai612xvKPm/view)  
+![Image](https://drive.google.com/file/d/15VEAYtZcH2YimnDUZbGpYsai612xvKPm/view)  
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ManjunathNayak2k/WhatsApp-Chat-Analyser/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
