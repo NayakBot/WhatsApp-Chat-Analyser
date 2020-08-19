@@ -17,7 +17,7 @@ Uses [ChartJS](https://www.chartjs.org/) for the graphs.
 
 ## Screenshots
 
-![Image](https://drive.google.com/uc?export=view&id=15VEAYtZcH2YimnDUZbGpYsai612xvKPm)  
-![Image](https://drive.google.com/uc?export=view&id=1ODuR65Tycpl98jJ9rIcdDz6cO-xgbg94)  
-![Image](https://drive.google.com/uc?export=view&id=1CfZLOtbxbOVnUqWj75VwgrXARo2t_4vg)  
+![screenshot](https://drive.google.com/uc?export=view&id=15VEAYtZcH2YimnDUZbGpYsai612xvKPm)  
+![screenshot](https://drive.google.com/uc?export=view&id=1ODuR65Tycpl98jJ9rIcdDz6cO-xgbg94)  
+![screenshot](https://drive.google.com/uc?export=view&id=1CfZLOtbxbOVnUqWj75VwgrXARo2t_4vg)  
 
